@@ -152,6 +152,210 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-c-基础知识-5-复杂数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/c-基础知识-5-复杂数据类型/">c#基础知识--5.复杂数据类型</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/09/c-基础知识-5-复杂数据类型/" class="archive-article-date">
+  	<time datetime="2019-08-09T12:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、变量类型<br>int double string char bool decimal<br>变量的使用规则：先声明再赋值最后使用<br>int number;<br>number=10;<br>number=20;<br>Console.WriteLine(number);<br>2、Camel  Pascal<br>3、运算符<br>赋值运算符：=<br>复合赋值运算符：+= -= <em>= /= %=  sum+=age;  sum=sum+age;<br>算数运算符： + - * / % ++ –<br>关系运算符： &gt; &lt; &gt;= &lt;= == !=<br>逻辑运算符： &amp;&amp; || !<br>4、c#中的语法结构<br>分支结构：<br>if if-else<br>选择结构：<br>while do-while for<br>5、常量<br>声明的常量的语法：<br>const 变量类型 变量名=值;<br>什么时候会用到常量？<br>6、枚举<br>语法：<br>[public] enum 枚举名<br>{<br>    值1,<br>    值2,<br>    值3,<br>    ……..<br>}<br>public:访问修饰符。公开的公共的，哪都可以访问。<br>enum：关键字，声明枚举的关键字<br>枚举名：要符合Pascal命名规范<br>将枚举声明到命名空间的下面，类的外面，表示这个命名空间下，所有的类都可以使用这个枚举。<br>枚举就是一个变量类型 ，int–double  string  decimal.<br>只是枚举声明、赋值、使用的方式跟那些普通的变量类型不一样。<br>我们可以将一个枚举类型的变量跟int类型和string类型互相转换。<br>枚举类型默认是跟int类型相互兼容的，所以可以通过强制类型转换的语法互相转换。<br>当转换一个枚举中没有的值的时候，不会抛异常，而是直接将数字显示出来。<br>枚举同样也可以跟string类型互相转换，如果将枚举类型转换成string类型，则直接调用ToString().<br>如果将字符串转换成枚举类型则需要下面这样一行代码：<br>(要转换的枚举类型)Enum.Parse(typeof(要转换的枚举类型),”要转换的字符串”);<br>如果转换的字符串是数字，则就算枚举中没有，也会不会抛异常。<br>如果转换的字符串是文本，如果枚举中没有，则会抛出异常。<br>7、所有的类型都能够转换成string类型，调用ToString()。<br>8、结构<br>可以帮助我们一次性声明多个不同类型的变量。<br>语法：<br>[public] struct 结构名<br>{<br>    成员;//字段<br>}<br>变量在程序运行期间只能存储一个值，而字段可以存储多个值。<br>9、数组<br>一次性存储多个相同类型的变量。<br>语法：<br>数组类型[] 数组名=new 数组类型[数组长度];<br>**</em>数组的长度一旦固定了，就不能再被改变了<br>10、冒泡排序：就是将一个数组中的元素按照从大到小或者从小到大的顺序进行排列。<br>int[] nums={9,8,7,6,5,4,3,2,1,0}; 0 1 2 3 4 5 6 7 8 9<br>第一趟比较：8 7 6 5 4 3 2 1 0 9 交换了9次     i=0  j=nums.Length-1-i<br>第二趟比较：7 6 5 4 3 2 1 0 8 9 交换了8次     i=1  j=nums.Length-1-i<br>第三趟比较：6 5 4 3 2 1 0 7 8 9 交换了7次     i=2  j=nums.Length-1-i<br>第四趟比较：5 4 3 2 1 0 6 7 8 9 交换了6次     i=3  j=nums.Length-1-i<br>第五趟比较：4 3 2 1 0 5 6 7 8 9 交换了5次<br>第六趟比较：3 2 1 0 4 5 6 7 8 9 交换了4次<br>第七趟比较：2 1 0 3 4 5 6 7 8 9 交换了3次<br>第八趟比较：1 0 2 3 4 5 6 7 8 9 交换了2次<br>第九趟比较：0 1 2 3 4 5 6 7 8 9 交换了1次<br>for(int i=0;i&lt; number.Length-1;i++)<br>{<br>    for(int j=0;j&lt; nums.Length-1-i;j++)<br>    {<br>        if(nums[j]&gt;nums[j+1])<br>        {<br>            int temp=nums[j];<br>            nums[j]=nums[j+1];<br>            nums[j+1]=temp;<br>        }<br>    }<br>}<br>11、方法<br>函数就是将一堆代码进行重用的一种机制。<br>函数的语法：<br>[public] static 返回值类型 方法名([参数列表])<br>{<br>    方法体；<br>}<br>public:访问修饰符，公开的，公共的，哪都可以访问。<br>static：静态的<br>返回值类型：如果不需要写返回值，写void<br>方法名：Pascal 每个单词的首字母都大些。其余字母小写<br>参数列表：完成这个方法所必须要提供给这个方法的条件。如果没有参数，小括号也不能省略。<br>方法写好后，如果想要被执行，必须要在Main()函数中调用。<br>方法的调用语法：<br>类名.方法名([参数]);<br>**<em>在某些情况下，类名是可以省略的，如果你写的方法跟Main()函数同在一个类中，这个时候，<br>类名可以省略。<br>12、return<br>1、在方法中返回要返回的值。<br>2、立即结束本次方法。<br>(<a href="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9" target="_blank" rel="noopener">http://m.qpic.cn/psb?/V129WZpg3qcrXt/9</a></em>mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&amp;bo=dALHAQAAAAADB5I!&amp;rf=viewer_4)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/09/c-基础知识-5-复杂数据类型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-c-基础知识-4-流程控制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/09/c-基础知识-4-流程控制/" class="archive-article-date">
+  	<time datetime="2019-08-09T12:28:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。<br>哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>    可能会出现异常的代码;<br>    ….<br>    …<br>    …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>    出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>    case 值1:要执行的代码;<br>    break;<br>    case 值2:要执行的代码;<br>    break;<br>    case 值3:要执行的代码;<br>    break;<br>    ……….<br>    default:要执行的代码;<br>    break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>    循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</p>
+<p>}<br>特点：先判断，再执行，有可能一遍循环都不执行。<br>5、break<br>1)、可以跳出switch-case结构。<br>2)、可以跳出当前循环。<br>break一般不单独的使用，而是跟着if判断一起使用，表示，当满足某些条件的时候，就不再循环了。<br>6、do-while循环。<br>语法：<br>do<br>{<br>    循环体;<br>}while(循环条件);<br>执行过程:程序首先会执行do中的循环体，执行完成后，去判断do-while循环的循环条件，<br>如果成立，则继续执行do中的循环体，如果不成立，则跳出do-while循环。<br>特点：先循环，再判断，最少执行一遍循环体。<br>7、*程序调试<br>1)、写完一段程序后，想看一下这段程序的执行过程。<br>2)、当你写完这段程序后，发现，程序并没有按照你想象的样子去执行。<br>调试方法：<br>1)、F11逐语句调试(单步调试)<br>2)、F10逐过程调试<br>3)、断点调试<br>8、for循环<br>语法:<br>for(表达式1;表达式2;表达式3)<br>{<br>    循环体;<br>}<br>表达式1一般为声明循环变量，记录循环的次数(int i=0;)<br>表达式2一般为循环条件(i&lt;10)<br>表达式3一般为改变循环条件的代码，使循环条件终有一天不再成立(i++)。<br>执行过程：程序首先执行表达式1，声明了一个循环变量用来记录循环的次数，<br>然后执行表达式2，判断循环条件是否成立，如果表达式2返回的结果为true，<br>则执行循环体。当执行完循环体后，执行表达式3，然后执行表达式2继续判断循环条件是否成立，<br>如果成立则继续执行循环体，如果不成立，则跳出for循环。<br>9、int.TryParse<br>int.parse<br>尝试着将一个字符串转换成int类型。<br>10、三元表达式<br>语法:<br>表达式1?表达式2:表达式3;<br>表达式1一般为一个关系表达式。<br>如果表达式1的值为true，那么表达式2的值就是整个三元表达式的值。<br>如果表达式1的值为false，那么表达式3的值就是整个三元表达式的值。<br>注意：表达式2的结果类型必须跟表达式3的结果类型一致，并且也要跟整个三元表达式的结果类型一致。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/09/c-基础知识-4-流程控制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-c-基础知识-3-运算符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/c-基础知识-3-运算符/">c#基础知识--3.运算符</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/09/c-基础知识-3-运算符/" class="archive-article-date">
+  	<time datetime="2019-08-09T12:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、类型如果相兼容的两个变量，可以使用自动类型转换或者强制类型转换，<br>但是，如果两个类型的变量不兼容，比如 string与int或者string 与double，<br>这个时候我们可以使用一个叫做Convert的转换工厂进行转换。<br>注意：使用Convert进行类型转换，也需要满足一个条件：<br>面儿上必须要过的去。<br>2、算数运算符<br>++：分为前++和后++，不管是前++还是后++，最终的结果都是给这个变量加一。<br>区别表现表达式当中，如果是前++，则先给这个变量自身加一，然后带着这个加一后的值去参与运算。<br>如果是后++，则先拿原值参与运算，运算完成后，再讲这个变量自身加一。<br>–：同上。<br>3、<br>对于加加或者减减这样只需要一个操作数就能完成的运算，我们称之为一元运算符。</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/ % 对于这些需要两个或以上才能完成运算的操作符，我们称之为二元运算符。<br>一元运算符的优先级要高于而元运算符。<br>如果在一个表达式当中，既有一元运算符，又有二元运算符，我们首先计算一元运算符。<br>int number=10;<br>int result=10 + ++number;<br>4、关系运算符<blockquote>
+<p>  &lt;  &gt;=   &lt;=   ==   !=<br>关系运算符是用来描述两个事物之间的关系<br>由关系运算符连接的表达式称之为关系表达式。<br>5、bool类型<br>在c#中我们用bool类型来描述对或者错。<br>bool类型的值只有两个 一个true  一个false<br>6、逻辑运算符<br>&amp;&amp; 逻辑与<br>||逻辑或<br>!逻辑非<br>又逻辑运算符连接的表达式叫做逻辑表达式<br>逻辑运算符两边放的一般都是关系表达式或者bool类型的值。<br>5&gt;3 &amp;&amp;true<br>3&gt;5||false<br>！表达式<br>逻辑表达式的结果同样也是bool类型<br>7、复合赋值运算符<br>int number=10;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>= :<br>number+=20;<br>number=number+20;</li>
+</ul>
+<p>-=<br>number-=5;<br>number=number-5;<br><em>=<br>number</em>=5;<br>number=number*5;<br>/=<br>%=<br>顺序结构：程序从Main函数进入，从上到下一行一行的执行，不会落下任何一行。<br>分支结构:if  if-else<br>选择结构：if else-if switch-case<br>循环结构：while do-while for foreach<br>8、<br>if语句：<br>语法：<br>if(判断条件)<br>{<br>    要执行的代码;<br>}<br>判断条件：一般为关系表达式或者bool类型的值。<br>执行过程：程序运行到if处，首先判断if所带的小括号中的判断条件，<br>如果条件成立，也就是返回true，则执行if所带的大括号中的代码，<br>如果判断条件不成立，也就是返回一个false。则跳过if结构，继续向下执行。<br>if结构的特点：先判断，再执行，有可能一行代码都不执行<br>用于一种情况的判断。<br>9、if-else<br>语法：<br>if(判断条件)<br>{<br>    执行的代码;<br>}<br>else<br>{<br>    执行的代码<br>}<br>执行过程：程序执行到if处，首先判断if所带的小括号中的判断条件是否成立，<br>如果成立，也就是返回一个true，则执行if所带的大括号中的代码，<br>执行完成后，跳出if-else结构。<br>如果if所带的小括号中的判断条件不成立，也就是返回一个false，<br>则跳过if语句，执行else所带的大括号中的语句，执行完成后，跳出if-else结构。<br>if-else特点：先判断，再执行，最少都要执行一条代码。<br>用于两种情况的判断<br>注意：else永远跟离它最近的那个if配对<br>10、if else-if<br>作用：用来处理多条件的区间性的判断。<br>语法：<br>if(判断条件)<br>{<br>    要执行的代码;<br>}<br>else if(判断条件)<br>{<br>    要执行的代码;<br>}<br>else if(判断条件)<br>{<br>    要执行的代码;<br>}<br>else if(判断条件)<br>{<br>    要执行的代码;<br>}<br>……..<br>else<br>{<br>    要执行的代码;<br>}<br>执行过程；程序首先判断第一个if所带的小括号中的判断条件，如果条件成立，也就是返回一个true，<br>则执行该if所带的大括号中的代码，执行完成后，立即跳出if else-if结构。<br>如果第一个if所带的判断条件不成立，也就是返回一个false，则继续向下进行判断，依次的判断每一个if所带<br>的判断条件，如果成立，就执行该if所带的大括号中的代码，如果不成立，则继续向下判断，<br>如果每个if所带的判断条件都不成立，就看当前这个if else-if结构中是否存在else。<br>如果有else的话，则执行else中所带的代码，如果没有else，则整个 if-else if神马都不做。<br>else可以省略。<br>11.Switch<br>switch-case语法:<br>switch(表达式/变量)<br>{<br>case 值1: 语句块1;<br>break;<br>case 值2: 语句块2;<br>break;<br>default:语句块3;<br>break;<br>}<br>12.if-else if与switch的比较(S)<br>相同点:都可以实现多分支结构<br>不同点:<br>if-else if:可以处理范围<br>switch:一般 只能用于等值比较<br>三者的区别：<br>if有条件的执行一条语句<br>if-else有条件的执行一条或另一条语句<br>switch有条件的执行一组语句中的一条语句</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/09/c-基础知识-3-运算符/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo发布文章教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
