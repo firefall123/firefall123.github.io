@@ -293,8 +293,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、变量类型<br>int double string char bool decimal<br>变量的使用规则：先声明再赋值最后使用<br>int number;<br>number=10;<br>number=20;<br>Console.WriteLine(number);<br>2、Camel  Pascal<br>3、运算符<br>赋值运算符：=<br>复合赋值运算符：+= -= <em>= /= %=  sum+=age;  sum=sum+age;<br>算数运算符： + - * / % ++ –<br>关系运算符： &gt; &lt; &gt;= &lt;= == !=<br>逻辑运算符： &amp;&amp; || !<br>4、c#中的语法结构<br>分支结构：<br>if if-else<br>选择结构：<br>while do-while for<br>5、常量<br>声明的常量的语法：<br>const 变量类型 变量名=值;<br>什么时候会用到常量？<br>6、枚举<br>语法：<br>[public] enum 枚举名<br>{<br>    值1,<br>    值2,<br>    值3,<br>    ……..<br>}<br>public:访问修饰符。公开的公共的，哪都可以访问。<br>enum：关键字，声明枚举的关键字<br>枚举名：要符合Pascal命名规范<br>将枚举声明到命名空间的下面，类的外面，表示这个命名空间下，所有的类都可以使用这个枚举。<br>枚举就是一个变量类型 ，int–double  string  decimal.<br>只是枚举声明、赋值、使用的方式跟那些普通的变量类型不一样。<br>我们可以将一个枚举类型的变量跟int类型和string类型互相转换。<br>枚举类型默认是跟int类型相互兼容的，所以可以通过强制类型转换的语法互相转换。<br>当转换一个枚举中没有的值的时候，不会抛异常，而是直接将数字显示出来。<br>枚举同样也可以跟string类型互相转换，如果将枚举类型转换成string类型，则直接调用ToString().<br>如果将字符串转换成枚举类型则需要下面这样一行代码：<br>(要转换的枚举类型)Enum.Parse(typeof(要转换的枚举类型),”要转换的字符串”);<br>如果转换的字符串是数字，则就算枚举中没有，也会不会抛异常。<br>如果转换的字符串是文本，如果枚举中没有，则会抛出异常。<br>7、所有的类型都能够转换成string类型，调用ToString()。<br>8、结构<br>可以帮助我们一次性声明多个不同类型的变量。<br>语法：<br>[public] struct 结构名<br>{<br>    成员;//字段<br>}<br>变量在程序运行期间只能存储一个值，而字段可以存储多个值。<br>9、数组<br>一次性存储多个相同类型的变量。<br>语法：<br>数组类型[] 数组名=new 数组类型[数组长度];<br>**</em>数组的长度一旦固定了，就不能再被改变了<br>10、冒泡排序：就是将一个数组中的元素按照从大到小或者从小到大的顺序进行排列。<br>int[] nums={9,8,7,6,5,4,3,2,1,0}; 0 1 2 3 4 5 6 7 8 9<br>第一趟比较：8 7 6 5 4 3 2 1 0 9 交换了9次     i=0  j=nums.Length-1-i<br>第二趟比较：7 6 5 4 3 2 1 0 8 9 交换了8次     i=1  j=nums.Length-1-i<br>第三趟比较：6 5 4 3 2 1 0 7 8 9 交换了7次     i=2  j=nums.Length-1-i<br>第四趟比较：5 4 3 2 1 0 6 7 8 9 交换了6次     i=3  j=nums.Length-1-i<br>第五趟比较：4 3 2 1 0 5 6 7 8 9 交换了5次<br>第六趟比较：3 2 1 0 4 5 6 7 8 9 交换了4次<br>第七趟比较：2 1 0 3 4 5 6 7 8 9 交换了3次<br>第八趟比较：1 0 2 3 4 5 6 7 8 9 交换了2次<br>第九趟比较：0 1 2 3 4 5 6 7 8 9 交换了1次<br>for(int i=0;i&lt; number.Length-1;i++)<br>{<br>    for(int j=0;j&lt; nums.Length-1-i;j++)<br>    {<br>        if(nums[j]&gt;nums[j+1])<br>        {<br>            int temp=nums[j];<br>            nums[j]=nums[j+1];<br>            nums[j+1]=temp;<br>        }<br>    }<br>}<br>11、方法<br>函数就是将一堆代码进行重用的一种机制。<br>函数的语法：<br>[public] static 返回值类型 方法名([参数列表])<br>{<br>    方法体；<br>}<br>public:访问修饰符，公开的，公共的，哪都可以访问。<br>static：静态的<br>返回值类型：如果不需要写返回值，写void<br>方法名：Pascal 每个单词的首字母都大些。其余字母小写<br>参数列表：完成这个方法所必须要提供给这个方法的条件。如果没有参数，小括号也不能省略。<br>方法写好后，如果想要被执行，必须要在Main()函数中调用。<br>方法的调用语法：<br>类名.方法名([参数]);<br>在某些情况下，类名是可以省略的，如果你写的方法跟Main()函数同在一个类中，这个时候，<br>类名可以省略。<br>12、return<br>1、在方法中返回要返回的值。<br>2、立即结束本次方法。<br><img src="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9*mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&bo=dALHAQAAAAADB5I!&rf=viewer_4" alt="数组"></p>
-
+              <p>&lt;1、变量类型<br>int double string char bool decimal&gt;</p>
+<ul>
+<li>
+          
       
     </div>
     
@@ -303,6 +305,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2019/08/09/c-基础知识-5-复杂数据类型/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -349,9 +355,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。<br>哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>    可能会出现异常的代码;<br>    ….<br>    …<br>    …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>    出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>    case 值1:要执行的代码;<br>    break;<br>    case 值2:要执行的代码;<br>    break;<br>    case 值3:要执行的代码;<br>    break;<br>    ……….<br>    default:要执行的代码;<br>    break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>    循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</p>
-<p>}<br>特点：先判断，再执行，有可能一遍循环都不执行。<br>5、break<br>1)、可以跳出switch-case结构。<br>2)、可以跳出当前循环。<br>break一般不单独的使用，而是跟着if判断一起使用，表示，当满足某些条件的时候，就不再循环了。<br>6、do-while循环。<br>语法：<br>do<br>{<br>    循环体;<br>}while(循环条件);<br>执行过程:程序首先会执行do中的循环体，执行完成后，去判断do-while循环的循环条件，<br>如果成立，则继续执行do中的循环体，如果不成立，则跳出do-while循环。<br>特点：先循环，再判断，最少执行一遍循环体。<br>7、*程序调试<br>1)、写完一段程序后，想看一下这段程序的执行过程。<br>2)、当你写完这段程序后，发现，程序并没有按照你想象的样子去执行。<br>调试方法：<br>1)、F11逐语句调试(单步调试)<br>2)、F10逐过程调试<br>3)、断点调试<br>8、for循环<br>语法:<br>for(表达式1;表达式2;表达式3)<br>{<br>    循环体;<br>}<br>表达式1一般为声明循环变量，记录循环的次数(int i=0;)<br>表达式2一般为循环条件(i&lt;10)<br>表达式3一般为改变循环条件的代码，使循环条件终有一天不再成立(i++)。<br>执行过程：程序首先执行表达式1，声明了一个循环变量用来记录循环的次数，<br>然后执行表达式2，判断循环条件是否成立，如果表达式2返回的结果为true，<br>则执行循环体。当执行完循环体后，执行表达式3，然后执行表达式2继续判断循环条件是否成立，<br>如果成立则继续执行循环体，如果不成立，则跳出for循环。<br>9、int.TryParse<br>int.parse<br>尝试着将一个字符串转换成int类型。<br>10、三元表达式<br>语法:<br>表达式1?表达式2:表达式3;<br>表达式1一般为一个关系表达式。<br>如果表达式1的值为true，那么表达式2的值就是整个三元表达式的值。<br>如果表达式1的值为false，那么表达式3的值就是整个三元表达式的值。<br>注意：表达式2的结果类型必须跟表达式3的结果类型一致，并且也要跟整个三元表达式的结果类型一致。</p>
-
+              <p>&lt;1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。&gt;</p>
+<ul>
+<li>
+          
       
     </div>
     
@@ -360,6 +367,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2019/08/09/c-基础知识-4-流程控制/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -406,7 +417,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <ul>
+              <p>&lt;1、类型如果相兼容的两个变量，可以使用自动类型转换或者强制类型转换，<br>但是，如果两个类型的变量不兼容，比如 string与int或者string 与double，<br>这个时候我们可以使用一个叫做Convert的转换工厂进行转换。&gt;</p>
+<ul>
 <li>
           
       
@@ -467,23 +479,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><blockquote>
-<p>这个是引用<br>—分隔符 大于三个</p>
-</blockquote>
-<p><strong>加粗</strong><br><em>斜体</em></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6860761-fd2f51090a890873.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550/format/webp" alt="这是鼠标放上面的名字"></p>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var i = 0</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>列表</li>
-<li>列表</li>
-</ul>
-<p>1.列表</p>
-<p>|表头|表头|表头|<br>|:-:||:-|-:|<br>|内容|内容|内容|</p>
-<p><del>删除线</del></p>
-<p>在文字中加那些哈哈哈</p>
-
+              <ul>
+<li>
+          
       
     </div>
     
@@ -492,6 +490,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2019/08/09/hexo发布文章教程/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -538,7 +540,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <ul>
+              <p>&lt;1、注释符<br>1)、注销<br>2)、解释<br>2、c#的3种注释符&gt;</p>
+<ul>
 <li>
           
       
@@ -599,7 +602,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <ul>
+              <p>&lt;1、.Net平台  .Net FrameWork框架<br>.Net FrameWork框架提供了一个稳定的运行环境，；来保障我们.Net平台正常的运转&gt;</p>
+<ul>
 <li>
           
       
@@ -660,20 +664,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+              <ul>
+<li>
+          
       
     </div>
     
@@ -682,6 +675,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2019/08/09/hello-world/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
