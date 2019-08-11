@@ -15,19 +15,19 @@
 
 
 
-<meta name="description" content="1、变量类型int double string char bool decimal">
+<meta name="description" content="1、变量类型int double string char bool decimal+">
 <meta name="keywords" content="C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c#基础知识--5.复杂数据类型">
 <meta property="og:url" content="https://firefall123.github.io/2019/08/09/c-基础知识-5-复杂数据类型/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、变量类型int double string char bool decimal">
+<meta property="og:description" content="1、变量类型int double string char bool decimal+">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9*mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&bo=dALHAQAAAAADB5I!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-08-11T03:01:27.833Z">
+<meta property="og:updated_time" content="2019-08-11T04:34:31.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c#基础知识--5.复杂数据类型">
-<meta name="twitter:description" content="1、变量类型int double string char bool decimal">
+<meta name="twitter:description" content="1、变量类型int double string char bool decimal+">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9*mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&bo=dALHAQAAAAADB5I!&rf=viewer_4">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -304,16 +304,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、变量类型<br>int double string char bool decimal</p>
-<ul>
-<li><a id="more"></a>
-变量的使用规则：先声明再赋值最后使用<br>int number;<br>number=10;<br>number=20;<br>Console.WriteLine(number);<br>2、Camel  Pascal<br>3、运算符<br>赋值运算符：=<br>复合赋值运算符：+= -= = /= %=  sum+=age;  sum=sum+age;<br>算数运算符： + - * / % ++ –<br>关系运算符： &gt; &lt; &gt;= &lt;= == !=<br>逻辑运算符： &amp;&amp; || !<br>4、c#中的语法结构<br>分支结构：<br>if if-else<br>选择结构：<br>while do-while for<br>5、常量<br>声明的常量的语法：<br>const 变量类型 变量名=值;<br>什么时候会用到常量？<br>6、枚举<br>语法：<br>[public] enum 枚举名<br>{<br>  值1,<br>  值2,<br>  值3,<br>  ……..<br>}<br>public:访问修饰符。公开的公共的，哪都可以访问。<br>enum：关键字，声明枚举的关键字<br>枚举名：要符合Pascal命名规范<br>将枚举声明到命名空间的下面，类的外面，表示这个命名空间下，所有的类都可以使用这个枚举。<br>枚举就是一个变量类型 ，int–double  string  decimal.<br>只是枚举声明、赋值、使用的方式跟那些普通的变量类型不一样。<br>我们可以将一个枚举类型的变量跟int类型和string类型互相转换。<br>枚举类型默认是跟int类型相互兼容的，所以可以通过强制类型转换的语法互相转换。<br>当转换一个枚举中没有的值的时候，不会抛异常，而是直接将数字显示出来。<br>枚举同样也可以跟string类型互相转换，如果将枚举类型转换成string类型，则直接调用ToString().<br>如果将字符串转换成枚举类型则需要下面这样一行代码：<br>(要转换的枚举类型)Enum.Parse(typeof(要转换的枚举类型),”要转换的字符串”);<br>如果转换的字符串是数字，则就算枚举中没有，也会不会抛异常。<br>如果转换的字符串是文本，如果枚举中没有，则会抛出异常。<br>7、所有的类型都能够转换成string类型，调用ToString()。<br>8、结构<br>可以帮助我们一次性声明多个不同类型的变量。<br>语法：<br>[public] struct 结构名<br>{<br>  成员;//字段<br>}<br>变量在程序运行期间只能存储一个值，而字段可以存储多个值。<br>9、数组<br>一次性存储多个相同类型的变量。<br>语法：<br>数组类型[] 数组名=new 数组类型[数组长度];<br>数组的长度一旦固定了，就不能再被改变了<br>10、冒泡排序：就是将一个数组中的元素按照从大到小或者从小到大的顺序进行排列。<br>int[] nums={9,8,7,6,5,4,3,2,1,0}; 0 1 2 3 4 5 6 7 8 9<br>第一趟比较：8 7 6 5 4 3 2 1 0 9 交换了9次     i=0  j=nums.Length-1-i<br>第二趟比较：7 6 5 4 3 2 1 0 8 9 交换了8次     i=1  j=nums.Length-1-i<br>第三趟比较：6 5 4 3 2 1 0 7 8 9 交换了7次     i=2  j=nums.Length-1-i<br>第四趟比较：5 4 3 2 1 0 6 7 8 9 交换了6次     i=3  j=nums.Length-1-i<br>第五趟比较：4 3 2 1 0 5 6 7 8 9 交换了5次<br>第六趟比较：3 2 1 0 4 5 6 7 8 9 交换了4次<br>第七趟比较：2 1 0 3 4 5 6 7 8 9 交换了3次<br>第八趟比较：1 0 2 3 4 5 6 7 8 9 交换了2次<br>第九趟比较：0 1 2 3 4 5 6 7 8 9 交换了1次<br>for(int i=0;i&lt; number.Length-1;i++)<br>{<br>  for(int j=0;j&lt; nums.Length-1-i;j++)<br>  {<pre><code>if(nums[j]&gt;nums[j+1])
-{
-    int temp=nums[j];
-    nums[j]=nums[j+1];
-    nums[j+1]=temp;
-}</code></pre>  }<br>}<br>11、方法<br>函数就是将一堆代码进行重用的一种机制。<br>函数的语法：<br>[public] static 返回值类型 方法名([参数列表])<br>{<br>  方法体；<br>}<br>public:访问修饰符，公开的，公共的，哪都可以访问。<br>static：静态的<br>返回值类型：如果不需要写返回值，写void<br>方法名：Pascal 每个单词的首字母都大些。其余字母小写<br>参数列表：完成这个方法所必须要提供给这个方法的条件。如果没有参数，小括号也不能省略。<br>方法写好后，如果想要被执行，必须要在Main()函数中调用。<br>方法的调用语法：<br>类名.方法名([参数]);<br>在某些情况下，类名是可以省略的，如果你写的方法跟Main()函数同在一个类中，这个时候，<br>类名可以省略。<br>12、return<br>1、在方法中返回要返回的值。<br>2、立即结束本次方法。<br><img src="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9*mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&bo=dALHAQAAAAADB5I!&rf=viewer_4" alt="数组"></li>
-</ul>
+        <p>1、变量类型<br>int double string char bool decimal+ <a id="more"></a><br>变量的使用规则：先声明再赋值最后使用<br>int number;<br>number=10;<br>number=20;<br>Console.WriteLine(number);<br>2、Camel  Pascal<br>3、运算符<br>赋值运算符：=<br>复合赋值运算符：+= -= = /= %=  sum+=age;  sum=sum+age;<br>算数运算符： + - * / % ++ –<br>关系运算符： &gt; &lt; &gt;= &lt;= == !=<br>逻辑运算符： &amp;&amp; || !<br>4、c#中的语法结构<br>分支结构：<br>if if-else<br>选择结构：<br>while do-while for<br>5、常量<br>声明的常量的语法：<br>const 变量类型 变量名=值;<br>什么时候会用到常量？<br>6、枚举<br>语法：<br>[public] enum 枚举名<br>{<br>    值1,<br>    值2,<br>    值3,<br>    ……..<br>}<br>public:访问修饰符。公开的公共的，哪都可以访问。<br>enum：关键字，声明枚举的关键字<br>枚举名：要符合Pascal命名规范<br>将枚举声明到命名空间的下面，类的外面，表示这个命名空间下，所有的类都可以使用这个枚举。<br>枚举就是一个变量类型 ，int–double  string  decimal.<br>只是枚举声明、赋值、使用的方式跟那些普通的变量类型不一样。<br>我们可以将一个枚举类型的变量跟int类型和string类型互相转换。<br>枚举类型默认是跟int类型相互兼容的，所以可以通过强制类型转换的语法互相转换。<br>当转换一个枚举中没有的值的时候，不会抛异常，而是直接将数字显示出来。<br>枚举同样也可以跟string类型互相转换，如果将枚举类型转换成string类型，则直接调用ToString().<br>如果将字符串转换成枚举类型则需要下面这样一行代码：<br>(要转换的枚举类型)Enum.Parse(typeof(要转换的枚举类型),”要转换的字符串”);<br>如果转换的字符串是数字，则就算枚举中没有，也会不会抛异常。<br>如果转换的字符串是文本，如果枚举中没有，则会抛出异常。<br>7、所有的类型都能够转换成string类型，调用ToString()。<br>8、结构<br>可以帮助我们一次性声明多个不同类型的变量。<br>语法：<br>[public] struct 结构名<br>{<br>    成员;//字段<br>}<br>变量在程序运行期间只能存储一个值，而字段可以存储多个值。<br>9、数组<br>一次性存储多个相同类型的变量。<br>语法：<br>数组类型[] 数组名=new 数组类型[数组长度];<br>数组的长度一旦固定了，就不能再被改变了<br>10、冒泡排序：就是将一个数组中的元素按照从大到小或者从小到大的顺序进行排列。<br>int[] nums={9,8,7,6,5,4,3,2,1,0}; 0 1 2 3 4 5 6 7 8 9<br>第一趟比较：8 7 6 5 4 3 2 1 0 9 交换了9次     i=0  j=nums.Length-1-i<br>第二趟比较：7 6 5 4 3 2 1 0 8 9 交换了8次     i=1  j=nums.Length-1-i<br>第三趟比较：6 5 4 3 2 1 0 7 8 9 交换了7次     i=2  j=nums.Length-1-i<br>第四趟比较：5 4 3 2 1 0 6 7 8 9 交换了6次     i=3  j=nums.Length-1-i<br>第五趟比较：4 3 2 1 0 5 6 7 8 9 交换了5次<br>第六趟比较：3 2 1 0 4 5 6 7 8 9 交换了4次<br>第七趟比较：2 1 0 3 4 5 6 7 8 9 交换了3次<br>第八趟比较：1 0 2 3 4 5 6 7 8 9 交换了2次<br>第九趟比较：0 1 2 3 4 5 6 7 8 9 交换了1次<br>for(int i=0;i&lt; number.Length-1;i++)<br>{<br>    for(int j=0;j&lt; nums.Length-1-i;j++)<br>    {<br>        if(nums[j]&gt;nums[j+1])<br>        {<br>            int temp=nums[j];<br>            nums[j]=nums[j+1];<br>            nums[j+1]=temp;<br>        }<br>    }<br>}<br>11、方法<br>函数就是将一堆代码进行重用的一种机制。<br>函数的语法：<br>[public] static 返回值类型 方法名([参数列表])<br>{<br>    方法体；<br>}<br>public:访问修饰符，公开的，公共的，哪都可以访问。<br>static：静态的<br>返回值类型：如果不需要写返回值，写void<br>方法名：Pascal 每个单词的首字母都大些。其余字母小写<br>参数列表：完成这个方法所必须要提供给这个方法的条件。如果没有参数，小括号也不能省略。<br>方法写好后，如果想要被执行，必须要在Main()函数中调用。<br>方法的调用语法：<br>类名.方法名([参数]);<br>在某些情况下，类名是可以省略的，如果你写的方法跟Main()函数同在一个类中，这个时候，<br>类名可以省略。<br>12、return<br>1、在方法中返回要返回的值。<br>2、立即结束本次方法。<br><img src="http://m.qpic.cn/psb?/V129WZpg3qcrXt/9*mPYfnrurnkQECxKll0BkWjsF0Xai7wBQCRTmc95Sc!/b/dLYAAAAAAAAA&bo=dALHAQAAAAADB5I!&rf=viewer_4" alt="数组"></p>
 
       
     </div>
@@ -325,7 +316,7 @@
         <p><span>本文标题:</span><a href="/2019/08/09/c-基础知识-5-复杂数据类型/">c#基础知识--5.复杂数据类型</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">yyf的博客</a></p>
         <p><span>发布时间:</span>2019-08-09, 20:29:03</p>
-        <p><span>最后更新:</span>2019-08-11, 11:01:27</p>
+        <p><span>最后更新:</span>2019-08-11, 12:34:31</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/09/c-基础知识-5-复杂数据类型/" title="c#基础知识--5.复杂数据类型">https://firefall123.github.io/2019/08/09/c-基础知识-5-复杂数据类型/</a>
             <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/09/c-基础知识-5-复杂数据类型/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

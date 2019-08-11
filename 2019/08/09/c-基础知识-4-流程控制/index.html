@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。+">
 <meta name="keywords" content="C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c#基础知识--4.流程控制">
 <meta property="og:url" content="https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta property="og:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。+">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T03:01:27.831Z">
+<meta property="og:updated_time" content="2019-08-11T04:34:31.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c#基础知识--4.流程控制">
-<meta name="twitter:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="twitter:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。+">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -302,11 +302,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。</p>
-<ul>
-<li><a id="more"></a>
-哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>  可能会出现异常的代码;<br>  ….<br>  …<br>  …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>  出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>  case 值1:要执行的代码;<br>  break;<br>  case 值2:要执行的代码;<br>  break;<br>  case 值3:要执行的代码;<br>  break;<br>  ……….<br>  default:要执行的代码;<br>  break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>  循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</li>
-</ul>
+        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。+ <a id="more"></a><br>哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>    可能会出现异常的代码;<br>    ….<br>    …<br>    …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>    出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>    case 值1:要执行的代码;<br>    break;<br>    case 值2:要执行的代码;<br>    break;<br>    case 值3:要执行的代码;<br>    break;<br>    ……….<br>    default:要执行的代码;<br>    break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>    循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</p>
 <p>}<br>特点：先判断，再执行，有可能一遍循环都不执行。<br>5、break<br>1)、可以跳出switch-case结构。<br>2)、可以跳出当前循环。<br>break一般不单独的使用，而是跟着if判断一起使用，表示，当满足某些条件的时候，就不再循环了。<br>6、do-while循环。<br>语法：<br>do<br>{<br>    循环体;<br>}while(循环条件);<br>执行过程:程序首先会执行do中的循环体，执行完成后，去判断do-while循环的循环条件，<br>如果成立，则继续执行do中的循环体，如果不成立，则跳出do-while循环。<br>特点：先循环，再判断，最少执行一遍循环体。<br>7、*程序调试<br>1)、写完一段程序后，想看一下这段程序的执行过程。<br>2)、当你写完这段程序后，发现，程序并没有按照你想象的样子去执行。<br>调试方法：<br>1)、F11逐语句调试(单步调试)<br>2)、F10逐过程调试<br>3)、断点调试<br>8、for循环<br>语法:<br>for(表达式1;表达式2;表达式3)<br>{<br>    循环体;<br>}<br>表达式1一般为声明循环变量，记录循环的次数(int i=0;)<br>表达式2一般为循环条件(i&lt;10)<br>表达式3一般为改变循环条件的代码，使循环条件终有一天不再成立(i++)。<br>执行过程：程序首先执行表达式1，声明了一个循环变量用来记录循环的次数，<br>然后执行表达式2，判断循环条件是否成立，如果表达式2返回的结果为true，<br>则执行循环体。当执行完循环体后，执行表达式3，然后执行表达式2继续判断循环条件是否成立，<br>如果成立则继续执行循环体，如果不成立，则跳出for循环。<br>9、int.TryParse<br>int.parse<br>尝试着将一个字符串转换成int类型。<br>10、三元表达式<br>语法:<br>表达式1?表达式2:表达式3;<br>表达式1一般为一个关系表达式。<br>如果表达式1的值为true，那么表达式2的值就是整个三元表达式的值。<br>如果表达式1的值为false，那么表达式3的值就是整个三元表达式的值。<br>注意：表达式2的结果类型必须跟表达式3的结果类型一致，并且也要跟整个三元表达式的结果类型一致。</p>
 
       
@@ -319,7 +315,7 @@
         <p><span>本文标题:</span><a href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">yyf的博客</a></p>
         <p><span>发布时间:</span>2019-08-09, 20:28:17</p>
-        <p><span>最后更新:</span>2019-08-11, 11:01:27</p>
+        <p><span>最后更新:</span>2019-08-11, 12:34:31</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/09/c-基础知识-4-流程控制/" title="c#基础知识--4.流程控制">https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/</a>
             <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
