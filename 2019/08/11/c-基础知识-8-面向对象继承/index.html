@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="description" content="1、命名空间可以认为类是属于命名空间的。如果在当前项目中没有这个类的命名空间，需要我们手动的导入这个类所在的命名空间。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c#基础知识--4.流程控制">
-<meta property="og:url" content="https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/index.html">
+<meta property="og:title" content="c#基础知识--8.面向对象继承">
+<meta property="og:url" content="https://firefall123.github.io/2019/08/11/c-基础知识-8-面向对象继承/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta property="og:description" content="1、命名空间可以认为类是属于命名空间的。如果在当前项目中没有这个类的命名空间，需要我们手动的导入这个类所在的命名空间。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-10T01:49:27.543Z">
+<meta property="og:updated_time" content="2019-08-11T01:54:16.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="c#基础知识--4.流程控制">
-<meta name="twitter:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="twitter:title" content="c#基础知识--8.面向对象继承">
+<meta name="twitter:description" content="1、命名空间可以认为类是属于命名空间的。如果在当前项目中没有这个类的命名空间，需要我们手动的导入这个类所在的命名空间。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>c#基础知识--4.流程控制 | Hexo</title>
+<title>c#基础知识--8.面向对象继承 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -261,11 +261,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-c-基础知识-4-流程控制" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-c-基础知识-8-面向对象继承" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/09/c-基础知识-4-流程控制/" class="article-date">
-      <time datetime="2019-08-09T12:28:17.000Z" itemprop="datePublished">2019-08-09</time>
+      <a href="/2019/08/11/c-基础知识-8-面向对象继承/" class="article-date">
+      <time datetime="2019-08-11T01:50:58.000Z" itemprop="datePublished">2019-08-11</time>
 </a>
 
 
@@ -280,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      c#基础知识--4.流程控制
+      c#基础知识--8.面向对象继承
     </h1>
   
 
@@ -297,12 +297,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。</p>
+        <p>1、命名空间<br>可以认为类是属于命名空间的。<br>如果在当前项目中没有这个类的命名空间，需要我们手动的导入这个类所在的命名空间。</p>
 <ul>
 <li><a id="more"></a>
-1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。<br>哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>  可能会出现异常的代码;<br>  ….<br>  …<br>  …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>  出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>  case 值1:要执行的代码;<br>  break;<br>  case 值2:要执行的代码;<br>  break;<br>  case 值3:要执行的代码;<br>  break;<br>  ……….<br>  default:要执行的代码;<br>  break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>  循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</li>
+1、命名空间<br>可以认为类是属于命名空间的。<br>如果在当前项目中没有这个类的命名空间，需要我们手动的导入这个类所在的命名空间。<br>1)、用鼠标去点<br>2)、alt+shift+F10<br>3)、记住命名空间，手动的去引用<br>2、在一个项目中引用另一个项目的类<br>1)、添加引用<br>2)、引用命名空间<br>3、值类型和引用类型<br>区别：<br>1、值类型和引用类型在内存上存储的地方不一样。<br>2、在传递值类型和传递引用类型的时候，传递的方式不一样。<br>值类型我们称之为值传递，引用类型我们称之为引用传递。<br>我们学的值类型和引用类型：<br>值类型：int、double、bool、char、decimal、struct、enum<br>引用类型：string、自定义类、数组<br>存储：<br>值类型的值是存储在内存的栈当中。<br>引用类型的值是存储在内存的堆中。<br>3、字符串<br>1)、字符串的不可变性<br>当你给一个字符串重新赋值之后，老值并没有销毁，而是重新开辟一块空间存储新值。<br>当程序结束后，GC扫描整个内存，如果发现有的空间没有被指向，则立即把它销毁。<br>2)、我们可以讲字符串看做是char类型的一个只读数组。<br>ToCharArray();将字符串转换为char数组<br>new string(char[] chs):能够将char数组转换为字符串<br>4、字符串提供的各种方法<br>1)、Length：获得当前字符串中字符的个数<br>2)、ToUpper():将字符转换成大写形式<br>3)、ToLower():将字符串转换成小写形式<br>4)、Equals(lessonTwo,StringComparison.OrdinalIgnoreCase):比较两个字符串，可以忽略大小写<br>5)、Split()：分割字符串，返回字符串类型的数组。<br>6)、Substring()：解决字符串。在截取的时候包含要截取的那个位置。<br>7)、IndexOf():判断某个字符串在字符串中第一次出现的位置，如果没有返回-1、值类型和引用类型在内存上存储的地方不一样。<br>8)、LastIndexOf()：判断某个字符串在字符串中最后一次出现的位置，如果没有同样返回-1<br>9)、StartsWith():判断以….开始<br>10)、EndsWith():判断以…结束<br>11)、Replace():将字符串中某个字符串替换成一个新的字符串<br>12)、Contains():判断某个字符串是否包含指定的字符串<br>13)、Trim():去掉字符串中前后的空格<br>14)、TrimEnd()：去掉字符串中结尾的空格<br>15)、TrimStart()：去掉字符串中前面的空格<br>16)、string.IsNullOrEmpty():判断一个字符串是否为空或者为null<br>17)、string.Join()：将数组按照指定的字符串连接，返回一个字符串。<br>5、继承<br>我们可能会在一些类中，写一些重复的成员，我们可以将这些重复的成员，<br>单独的封装到一个类中，作为这些类的父类。<br>Student、Teacher、Driver  子类  派生类<br>Person                     父类  基类<br>子类继承了父类，那么子类从父类那里继承过来了什么？<br>首先，子类继承了父类的属性和方法，但是子类并没有继承父类的私有字段。<br>问题：子类有没有继承父类的构造函数？<br>答：子类并没有继承父类的构造函数，但是。子类会默认的调用父类无参数的构造函数，<br>创建父类对象，让子类可以使用父类中的成员。<br>所以，如果在父类中重新写了一个有参数的构造函数之后，那个无参数的就被干掉了，<br>子类就调用不到了，所以子类会报错。<br>解决办法：<br>1)、在父类中重新写一个无参数的构造函数。<br>2)、在子类中显示的调用父类的构造函数，使用关键字:base()<br>6、继承的特性<br>1、继承的单根性：一个子类只能有一个父类。<br>2、继承的传递性<br>7、查看类图<br>8、object是所有类的基类。<br>9、new关键字<br>1)、创建对象<br>2)、隐藏从父类那里继承过来的同名成员。<br>隐藏的后果就是子类调用不到父类的成员。</li>
 </ul>
-<p>}<br>特点：先判断，再执行，有可能一遍循环都不执行。<br>5、break<br>1)、可以跳出switch-case结构。<br>2)、可以跳出当前循环。<br>break一般不单独的使用，而是跟着if判断一起使用，表示，当满足某些条件的时候，就不再循环了。<br>6、do-while循环。<br>语法：<br>do<br>{<br>    循环体;<br>}while(循环条件);<br>执行过程:程序首先会执行do中的循环体，执行完成后，去判断do-while循环的循环条件，<br>如果成立，则继续执行do中的循环体，如果不成立，则跳出do-while循环。<br>特点：先循环，再判断，最少执行一遍循环体。<br>7、*程序调试<br>1)、写完一段程序后，想看一下这段程序的执行过程。<br>2)、当你写完这段程序后，发现，程序并没有按照你想象的样子去执行。<br>调试方法：<br>1)、F11逐语句调试(单步调试)<br>2)、F10逐过程调试<br>3)、断点调试<br>8、for循环<br>语法:<br>for(表达式1;表达式2;表达式3)<br>{<br>    循环体;<br>}<br>表达式1一般为声明循环变量，记录循环的次数(int i=0;)<br>表达式2一般为循环条件(i&lt;10)<br>表达式3一般为改变循环条件的代码，使循环条件终有一天不再成立(i++)。<br>执行过程：程序首先执行表达式1，声明了一个循环变量用来记录循环的次数，<br>然后执行表达式2，判断循环条件是否成立，如果表达式2返回的结果为true，<br>则执行循环体。当执行完循环体后，执行表达式3，然后执行表达式2继续判断循环条件是否成立，<br>如果成立则继续执行循环体，如果不成立，则跳出for循环。<br>9、int.TryParse<br>int.parse<br>尝试着将一个字符串转换成int类型。<br>10、三元表达式<br>语法:<br>表达式1?表达式2:表达式3;<br>表达式1一般为一个关系表达式。<br>如果表达式1的值为true，那么表达式2的值就是整个三元表达式的值。<br>如果表达式1的值为false，那么表达式3的值就是整个三元表达式的值。<br>注意：表达式2的结果类型必须跟表达式3的结果类型一致，并且也要跟整个三元表达式的结果类型一致。</p>
+<p>1、里氏转换<br>1)、子类可以赋值给父类<br>2)、如果父类中装的是子类对象，那么可以讲这个父类强转为子类对象。<br>2、子类对象可以调用父类中的成员，但是父类对象永远都只能调用自己的成员。<br>3、is：表示类型转换，如果能够转换成功，则返回一个true，否则返回一个false<br>as：表示类型转换，如果能够转换则返回对应的对象，否则返回一个null<br>4、protected<br>受保护的：可以在当前类的内部以及该类的子类中访问。<br>5、ArrayList集合的长度问题<br>每次集合中实际包含的元素个数(count)超过了可以包含的元素的个数(capcity)的时候，<br>集合就会向内存中申请多开辟一倍的空间，来保证集合的长度一直够用。<br>6、Hastable 键值对集合  字典  孙    sun—孙<br>在键值对集合当中，我们是根据键去找值的。<br>键值对对象[键]=值;<br>*****:键值对集合当中，键必须是唯一的，而值是可以重复的<br>7、foreach循环<br>8、编码格式<br>产生乱码的原因就是因为你保存这个文件的编码格式跟你打开这个文件的编码格式不一样。<br>9、文本文件<br>拖到txt文件中，还能看得懂的文件就是文本文件。</p>
 
       
     </div>
@@ -311,13 +311,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/11/c-基础知识-8-面向对象继承/">c#基础知识--8.面向对象继承</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">yyf的博客</a></p>
-        <p><span>发布时间:</span>2019-08-09, 20:28:17</p>
-        <p><span>最后更新:</span>2019-08-10, 09:49:27</p>
+        <p><span>发布时间:</span>2019-08-11, 09:50:58</p>
+        <p><span>最后更新:</span>2019-08-11, 09:54:16</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/09/c-基础知识-4-流程控制/" title="c#基础知识--4.流程控制">https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/11/c-基础知识-8-面向对象继承/" title="c#基础知识--8.面向对象继承">https://firefall123.github.io/2019/08/11/c-基础知识-8-面向对象继承/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/11/c-基础知识-8-面向对象继承/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -330,15 +330,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/08/09/c-基础知识-5-复杂数据类型/">
-                    c#基础知识--5.复杂数据类型
+                <a href="/2019/08/11/c-基础知识-9-面向对象多态/">
+                    c#基础知识--9.面向对象多态
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/08/09/c-基础知识-3-运算符/">
-                    c#基础知识--3.运算符
+                <a href="/2019/08/11/c-基础知识-7-面向对象初级/">
+                    c#基础知识--7.面向对象初级
                 </a>
             </div>
         
@@ -386,7 +386,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"c#基础知识--4.流程控制　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"c#基础知识--8.面向对象继承　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -406,7 +406,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/09/c-基础知识-5-复杂数据类型/" title="上一篇: c#基础知识--5.复杂数据类型">
+            <a href="/2019/08/11/c-基础知识-9-面向对象多态/" title="上一篇: c#基础知识--9.面向对象多态">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -414,7 +414,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/08/09/c-基础知识-3-运算符/" title="下一篇: c#基础知识--3.运算符">
+            <a href="/2019/08/11/c-基础知识-7-面向对象初级/" title="下一篇: c#基础知识--7.面向对象初级">
                 <i class="fa fa-angle-right"></i>
             </a>
         

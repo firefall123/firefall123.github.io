@@ -15,13 +15,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://firefall123.github.io/archives/index.html">
+<meta name="description" content="1、绝对路径和相对路径绝对路径：通过给定的这个路径直接能在我的电脑中找到这个文件。相对路径：文件相对于应用程序的路径。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c#基础知识--9.面向对象多态">
+<meta property="og:url" content="https://firefall123.github.io/2019/08/11/c-基础知识-9-面向对象多态/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、绝对路径和相对路径绝对路径：通过给定的这个路径直接能在我的电脑中找到这个文件。相对路径：文件相对于应用程序的路径。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-11T01:54:16.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="c#基础知识--9.面向对象多态">
+<meta name="twitter:description" content="1、绝对路径和相对路径绝对路径：通过给定的这个路径直接能在我的电脑中找到这个文件。相对路径：文件相对于应用程序的路径。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -53,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives | Hexo</title>
+<title>c#基础知识--9.面向对象多态 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -63,8 +67,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -257,317 +261,172 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-c-基础知识-9-面向对象多态" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2019/08/11/c-基础知识-9-面向对象多态/" class="article-date">
+      <time datetime="2019-08-11T01:51:21.000Z" itemprop="datePublished">2019-08-11</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      c#基础知识--9.面向对象多态
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/11/c-基础知识-10-Winform应用程序/" class="archive-article-date">
-      <time datetime="2019-08-11T01:52:38.000Z" itemprop="datePublished">08-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/c-基础知识-10-Winform应用程序/">c#基础知识--10.Winform应用程序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <p>1、绝对路径和相对路径<br>绝对路径：通过给定的这个路径直接能在我的电脑中找到这个文件。<br>相对路径：文件相对于应用程序的路径。</p>
+<ul>
+<li><a id="more"></a>
+1、绝对路径和相对路径<br>绝对路径：通过给定的这个路径直接能在我的电脑中找到这个文件。<br>相对路径：文件相对于应用程序的路径。<br>结论：<br>我们在开发中应该去尽量的使用相对路径。<br>2、装箱、拆箱<br>装箱：就是将值类型转换为引用类型。<br>拆箱：将引用类型转换为值类型。<br>看两种类型是否发生了装箱或者拆箱，要看，这两种类型是否存在继承关系。<br>3、将创建文件流对象的过程写在using当中，会自动的帮助我们释放流所占用的资源。<br>4、实现多态的手段<br>1)、虚方法<br>步骤：<br>1、将父类的方法标记为虚方法 ，使用关键字 virtual，这个函数可以被子类重新写一个遍。<br>2)、抽象类<br>当父类中的方法不知道如何去实现的时候，可以考虑将父类写成抽象类，将方法写成抽象方法。<br>5、c#中的访问修饰符<br>public :公开的公共的<br>private：私有的，只能在当前类的内部访问<br>protected：受保护的，只能在当前类的内部以及该类的子类中访问。<br>internal：只能在当前项目中访问。在同一个项目中，internal和public的权限是一样。<br>protected internal：protected+internal<br>1)、能够修饰类的访问修饰符只有两个：public、internal。<br>2)、可访问性不一致。<br>子类的访问权限不能高于父类的访问权限，会暴漏父类的成员。<br>6、设计模式<br>设计这个项目的一种方式。<br>7、简单工厂设计模式<br>8、值类型在复制的时候，传递的是这个值得本身。<br> 引用类型在复制的时候，传递的是对这个对象的引用。<br>9、序列化：就是将对象转换为二进制<br> 反序列化：就是将二进制转换为对象<br> 作用：传输数据。<br>序列化：<br>1)、将这个类标记为可以被序列化的。<br>10、partial部分类<br>11、sealed密封类<br>不能够被其他类继承，但是可以继承于其他类。<br>12、接口<br>[public] interface I..able<br>{<br>  成员;<br>}<br>13接口<br>接口是一种规范。<br>只要一个类继承了一个接口，这个类就必须实现这个接口中所有的成员<br>为了多态。接口不能被实例化。<br>也就是说，接口不能new(不能创建对象)<br>接口中的成员不能加“访问修饰符”，接口中的成员访问修饰符为public,不能修改。<br>（默认为public）<br>接口中的成员不能有任何实现（“光说不做”，只是定义了一组未实现的成员）。<br>接口中只能有方法、属性、索引器、事件，不能有“字段”和构造函数。<br>接口与接口之间可以继承，并且可以多继承。<br>接口并不能去继承一个类，而类可以继承接口  （接口只能继承于接口，而类既可以继承接口，也可以继承类）<br>实现接口的子类必须实现该接口的全部成员。<br>一个类可以同时继承一个类并实现多个接口，如果一个子类同时继承了父类A，并实现了接口IA,那么语法上A必须写在IA的前面。<br>class MyClass:A,IA{}，因为类是单继承的。<br>显示实现接口的目的：解决方法的重名问题<br>什么时候显示的去实现接口：<br>当继承的借口中的方法和参数一摸一样的时候，要是用显示的实现接口<br>当一个抽象类实现接口的时候，需要子类去实现接口。</li>
+</ul>
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/11/c-基础知识-9-面向对象多态/" class="archive-article-date">
-      <time datetime="2019-08-11T01:51:21.000Z" itemprop="datePublished">08-11</time>
-</a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/08/11/c-基础知识-9-面向对象多态/">c#基础知识--9.面向对象多态</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">yyf的博客</a></p>
+        <p><span>发布时间:</span>2019-08-11, 09:51:21</p>
+        <p><span>最后更新:</span>2019-08-11, 09:54:16</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/11/c-基础知识-9-面向对象多态/" title="c#基础知识--9.面向对象多态">https://firefall123.github.io/2019/08/11/c-基础知识-9-面向对象多态/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/11/c-基础知识-9-面向对象多态/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/c-基础知识-9-面向对象多态/">c#基础知识--9.面向对象多态</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/11/c-基础知识-8-面向对象继承/" class="archive-article-date">
-      <time datetime="2019-08-11T01:50:58.000Z" itemprop="datePublished">08-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/c-基础知识-8-面向对象继承/">c#基础知识--8.面向对象继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/11/c-基础知识-7-面向对象初级/" class="archive-article-date">
-      <time datetime="2019-08-11T01:49:54.000Z" itemprop="datePublished">08-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/c-基础知识-7-面向对象初级/">c#基础知识--7.面向对象初级</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/11/c-基础知识-6-函数/" class="archive-article-date">
-      <time datetime="2019-08-11T01:48:46.000Z" itemprop="datePublished">08-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/c-基础知识-6-函数/">c#基础知识--6.函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/09/c-基础知识-5-复杂数据类型/" class="archive-article-date">
-      <time datetime="2019-08-09T12:29:03.000Z" itemprop="datePublished">08-09</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/c-基础知识-5-复杂数据类型/">c#基础知识--5.复杂数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/09/c-基础知识-4-流程控制/" class="archive-article-date">
-      <time datetime="2019-08-09T12:28:17.000Z" itemprop="datePublished">08-09</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/09/c-基础知识-3-运算符/" class="archive-article-date">
-      <time datetime="2019-08-09T12:27:28.000Z" itemprop="datePublished">08-09</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/c-基础知识-3-运算符/">c#基础知识--3.运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/09/hexo发布文章教程/" class="archive-article-date">
-      <time datetime="2019-08-09T06:48:19.000Z" itemprop="datePublished">08-09</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/hexo发布文章教程/">hexo发布文章教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/08/09/c-基础知识-2-c-基础/" class="archive-article-date">
-      <time datetime="2019-08-09T05:25:58.000Z" itemprop="datePublished">08-09</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/c-基础知识-2-c-基础/">c#基础知识--2.c#基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/08/11/c-基础知识-10-Winform应用程序/">
+                    c#基础知识--10.Winform应用程序
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/08/11/c-基础知识-8-面向对象继承/">
+                    c#基础知识--8.面向对象继承
+                </a>
+            </div>
+        
     </nav>
-  
 
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"c#基础知识--9.面向对象多态　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/08/11/c-基础知识-10-Winform应用程序/" title="上一篇: c#基础知识--10.Winform应用程序">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/08/11/c-基础知识-8-面向对象继承/" title="下一篇: c#基础知识--8.面向对象继承">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/11/c-基础知识-10-Winform应用程序/">c#基础知识--10.Winform应用程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/11/c-基础知识-9-面向对象多态/">c#基础知识--9.面向对象多态</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/11/c-基础知识-8-面向对象继承/">c#基础知识--8.面向对象继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/11/c-基础知识-7-面向对象初级/">c#基础知识--7.面向对象初级</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/11/c-基础知识-6-函数/">c#基础知识--6.函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/c-基础知识-5-复杂数据类型/">c#基础知识--5.复杂数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/c-基础知识-3-运算符/">c#基础知识--3.运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/hexo发布文章教程/">hexo发布文章教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/c-基础知识-2-c-基础/">c#基础知识--2.c#基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/c-基础知识-1-学前入门/">c#基础知识--1.学前入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/09/hello-world/">hello world</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

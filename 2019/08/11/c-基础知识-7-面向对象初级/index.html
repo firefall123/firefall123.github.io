@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="description" content="1、面向过程—–&amp;gt; 面向对象面向过程：面向的是完成这件事儿的过程，强调的是完成这件事儿的动作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c#基础知识--4.流程控制">
-<meta property="og:url" content="https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/index.html">
+<meta property="og:title" content="c#基础知识--7.面向对象初级">
+<meta property="og:url" content="https://firefall123.github.io/2019/08/11/c-基础知识-7-面向对象初级/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta property="og:description" content="1、面向过程—–&amp;gt; 面向对象面向过程：面向的是完成这件事儿的过程，强调的是完成这件事儿的动作。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-10T01:49:27.543Z">
+<meta property="og:updated_time" content="2019-08-11T01:50:30.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="c#基础知识--4.流程控制">
-<meta name="twitter:description" content="1、异常捕获我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。在你的代码中应该经常性的使用try-catch来进行异常捕获。">
+<meta name="twitter:title" content="c#基础知识--7.面向对象初级">
+<meta name="twitter:description" content="1、面向过程—–&amp;gt; 面向对象面向过程：面向的是完成这件事儿的过程，强调的是完成这件事儿的动作。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>c#基础知识--4.流程控制 | Hexo</title>
+<title>c#基础知识--7.面向对象初级 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -261,11 +261,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-c-基础知识-4-流程控制" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-c-基础知识-7-面向对象初级" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/09/c-基础知识-4-流程控制/" class="article-date">
-      <time datetime="2019-08-09T12:28:17.000Z" itemprop="datePublished">2019-08-09</time>
+      <a href="/2019/08/11/c-基础知识-7-面向对象初级/" class="article-date">
+      <time datetime="2019-08-11T01:49:54.000Z" itemprop="datePublished">2019-08-11</time>
 </a>
 
 
@@ -280,7 +280,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      c#基础知识--4.流程控制
+      c#基础知识--7.面向对象初级
     </h1>
   
 
@@ -297,12 +297,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。</p>
+        <p>1、面向过程—–&gt; 面向对象<br>面向过程：面向的是完成这件事儿的过程，强调的是完成这件事儿的动作。</p>
 <ul>
 <li><a id="more"></a>
-1、异常捕获<br>我们在程序中经常会出现各种各样的异常，你如果想要你的程序变得坚强一些。<br>在你的代码中应该经常性的使用try-catch来进行异常捕获。<br>哪行代码有可能出现异常，你就踹它一脚。<br>语法：<br>try<br>{<br>  可能会出现异常的代码;<br>  ….<br>  …<br>  …<br>}<br>//try和catch之间不能有其他的代码<br>catch<br>{<br>  出现异常后要执行的代码;<br>}<br>执行过程:如果try中的代码没有出现异常，那么catch中的代码不会执行。<br>如果try中的代码出现了异常，那怕这行出现异常的代码后面还有一百行都不会执行了，<br>而是直接跳到catch中执行代码<br>2、变量的作用域<br>变量的作用域就是你能够使用到这个变量的范围。<br>变量的作用域一般从声明它的那个括号开始到那个括号所对应的结束的括号结束。<br>在这个范围内，我们可以访问并使用变量。超出这个范围就访问不到了<br>3、switch-case<br>用来处理多条件的定值的判断。<br>语法：<br>switch(变量或者表达式的值)<br>{<br>  case 值1:要执行的代码;<br>  break;<br>  case 值2:要执行的代码;<br>  break;<br>  case 值3:要执行的代码;<br>  break;<br>  ……….<br>  default:要执行的代码;<br>  break;<br>}<br>执行过程：程序执行到switch处，首先将括号中变量或者表达式的值计算出来，<br>然后拿着这个值依次跟每个case后面所带的值进行匹配，一旦匹配成功，则执行<br>该case所带的代码，执行完成后，遇到break。跳出switch-case结构。<br>如果，跟每个case所带的值都不匹配。就看当前这个switch-case结构中是否存在<br>default，如果有default，则执行default中的语句，如果没有default，则该switch-case结构<br>什么都不做。<br>4、循环结构<br>while循环：<br>while(循环条件)<br>{<br>  循环体;<br>}<br>执行过程：程序运行到while处，首先判断while所带的小括号内的循环条件是否成立，<br>如果成立的话，也就是返回一个true，则执行循环体，执行完一遍循环体后，再次回到<br>循环条件进行判断，如果依然成立，则继续执行循环体，如果不成立，则跳出while循环。<br>在while循环当中，一般总会有那么一行代码，能够改变循环条件，使之终有一天不再成立，<br>如果没有那么一行代码能够改变循环条件，也就是循环条件永远都成立，我们称之这种循环<br>叫做死循环。<br>最简单的最常用的死循环：<br>while(true)<br>{</li>
+1、面向过程—–&gt; 面向对象<br>面向过程：面向的是完成这件事儿的过程，强调的是完成这件事儿的动作。<br>把大象塞进冰箱里<br>1、打开冰箱门<br>2、把大象塞进去，亲下大象的屁股<br>3、关闭冰箱门</li>
 </ul>
-<p>}<br>特点：先判断，再执行，有可能一遍循环都不执行。<br>5、break<br>1)、可以跳出switch-case结构。<br>2)、可以跳出当前循环。<br>break一般不单独的使用，而是跟着if判断一起使用，表示，当满足某些条件的时候，就不再循环了。<br>6、do-while循环。<br>语法：<br>do<br>{<br>    循环体;<br>}while(循环条件);<br>执行过程:程序首先会执行do中的循环体，执行完成后，去判断do-while循环的循环条件，<br>如果成立，则继续执行do中的循环体，如果不成立，则跳出do-while循环。<br>特点：先循环，再判断，最少执行一遍循环体。<br>7、*程序调试<br>1)、写完一段程序后，想看一下这段程序的执行过程。<br>2)、当你写完这段程序后，发现，程序并没有按照你想象的样子去执行。<br>调试方法：<br>1)、F11逐语句调试(单步调试)<br>2)、F10逐过程调试<br>3)、断点调试<br>8、for循环<br>语法:<br>for(表达式1;表达式2;表达式3)<br>{<br>    循环体;<br>}<br>表达式1一般为声明循环变量，记录循环的次数(int i=0;)<br>表达式2一般为循环条件(i&lt;10)<br>表达式3一般为改变循环条件的代码，使循环条件终有一天不再成立(i++)。<br>执行过程：程序首先执行表达式1，声明了一个循环变量用来记录循环的次数，<br>然后执行表达式2，判断循环条件是否成立，如果表达式2返回的结果为true，<br>则执行循环体。当执行完循环体后，执行表达式3，然后执行表达式2继续判断循环条件是否成立，<br>如果成立则继续执行循环体，如果不成立，则跳出for循环。<br>9、int.TryParse<br>int.parse<br>尝试着将一个字符串转换成int类型。<br>10、三元表达式<br>语法:<br>表达式1?表达式2:表达式3;<br>表达式1一般为一个关系表达式。<br>如果表达式1的值为true，那么表达式2的值就是整个三元表达式的值。<br>如果表达式1的值为false，那么表达式3的值就是整个三元表达式的值。<br>注意：表达式2的结果类型必须跟表达式3的结果类型一致，并且也要跟整个三元表达式的结果类型一致。</p>
+<p>如果我们用面向过程的思想来解决这件事儿，当执行这件事的人的不同的时候，<br>我们需要为每个不同的人量身定做解决事情的方法。</p>
+<p>面向对象：找个对象帮你做事儿。<br>把大象塞进冰箱里<br>我们把冰箱作为对象：<br>1、冰箱门可以被打开<br>2、大象可以被塞进冰箱里<br>3、冰箱门可以被关闭</p>
+<p>面向对象：意在写出一个通用的代码，屏蔽差异。</p>
+<p>关门<br>面向过程：关门<br>张三 一脚把门踹紧了<br>李四 轻轻的把门带上了<br>王五 门没关严，留了个尾巴</p>
+<p>面向对象：关门<br>门可以被关闭</p>
+<p>我在黑板上画了一个零星<br>将 圆圈作为对象<br>圆圈可以被画在黑板上</p>
+<p>将 黑板作为对象<br>黑板可以被画圆</p>
+<p>我在黑板上画了一个圆<br>张三上来的  哪尺子比这画了一个特别圆的圆<br>李四上来的 随便一划拉<br>王五上来了  圆规画了一个圆<br>圆可以被画在黑板上<br>圆圈可以被画在黑板上<br>将圆圈作为对象：这个圆圈可以被画在黑板上。<br>黑板可以被画圆<br>黑板作为一个对象：可以被画圆圈  被画方块 被画正方向<br>我们在代码中描述一个对象，通过描述这个对象的属性和方法<br>对象必须是看得见摸得着的</p>
+<p>灯：属性和方法<br>属性：<br>外形：长的<br>亮度：500W<br>颜色：白色<br>牌子：XX<br>方法：发光</p>
+<p>电风扇：属性、方法<br>外形：三个扇叶<br>颜色：白色<br>品牌：XX<br>方法：转动，扇风</p>
+<p>我们把这些具有相同属性和相同方法的对象进行进一步的封装，抽象出来 类这个概念。<br>类就是个模子，确定了对象应该具有的属性和方法。<br>对象是根据类创建出来的。<br>类就是一个盖大楼的图纸   对象 就是盖出来的大楼。<br>2、类<br>语法：<br>[public] class 类名<br>{<br>    字段;<br>    属性;<br>    方法;<br>}<br>写好了一个类之后，我们需要创建这个类的对象，<br>那么，我们管创建这个类的对象过程称之为类的实例化。<br>使用关键字 new.<br>this:表示当前这个类的对象。<br>类是不占内存的，而对象是占内存的。<br>3、属性<br>属性的作用就是保护字段、对字段的赋值和取值进行限定。<br>属性的本质就是两个方法，一个叫get()一个叫set()。<br>既有get()也有set()我们诚之为可读可写属性。<br>只有get()没有set()我们称之为只读属性<br>没有get()只有set()我们称之为只写属性<br>Field字段<br>Method方法<br>Property属性<br>****字段就是女人  属性才是男人。<br>4、访问修饰符<br>public：公开的公共的，在哪都能访问。<br>private：私有的，只能在当前类的内部进行访问，出了这个类就访问不到了。<br>5、对象的初始化<br>当我们创建好一个类的对象后，需要给这个对象的每个属性去赋值。<br>我们管这个过程称之为对象的初始化。<br>6、静态和非静态的区别<br>1)、在非静态类中，既可以有实例成员，也可以有静态成员。<br>2)、在调用实例成员的时候，需要使用对象名.实例成员;<br>    在调用静态成员的时候，需要使用类名.静态成员名;<br>总结：静态成员必须使用类名去调用，而实例成员使用对象名调用。<br>      静态函数中，只能访问静态成员，不允许访问实例成员。<br>      实例函数中，既可以使用静态成员，也可以使用实例成员。<br>      静态类中只允许有静态成员，不允许出现实例成员。<br>使用：<br>1)、如果你想要你的类当做一个”工具类”去使用，这个时候可以考虑将类写成静态的。<br>2)、静态类在整个项目中资源共享。<br>只有在程序全部结束之后，静态类才会释放资源。<br>堆  栈  静态存储区域<br>释放资源。GC Garbage Collection垃圾回收器<br>7、构造函数<br>作用：帮助我们初始化对象(给对象的每个属性依次的赋值)<br>构造函数是一个特殊的方法：<br>1)、构造函数没有返回值，连void也不能写。<br>2)、构造函数的名称必须跟类名一样。<br>创建对象的时候会执行构造函数<br>构造函数是可以有重载的。<br>类当中会有一个默认的无参数的构造函数，当你写一个新的构造函数之后，不管是有参数的还是<br>无参数的，那个默认的无参数的构造函数都被干掉了。<br>8、new关键字<br>Person zsPerson=new Person();<br>new帮助我们做了3件事儿：<br>1)、在内存中开辟一块空间<br>2)、在开辟的空间中创建对象<br>3)、调用对象的构造函数进行初始化对象<br>9、this关键字<br>1)、代表当前类的对象<br>2)、在类当中显示的调用本类的构造函数  :this</p>
 
       
     </div>
@@ -311,13 +321,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/09/c-基础知识-4-流程控制/">c#基础知识--4.流程控制</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/11/c-基础知识-7-面向对象初级/">c#基础知识--7.面向对象初级</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">yyf的博客</a></p>
-        <p><span>发布时间:</span>2019-08-09, 20:28:17</p>
-        <p><span>最后更新:</span>2019-08-10, 09:49:27</p>
+        <p><span>发布时间:</span>2019-08-11, 09:49:54</p>
+        <p><span>最后更新:</span>2019-08-11, 09:50:30</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/09/c-基础知识-4-流程控制/" title="c#基础知识--4.流程控制">https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/09/c-基础知识-4-流程控制/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/11/c-基础知识-7-面向对象初级/" title="c#基础知识--7.面向对象初级">https://firefall123.github.io/2019/08/11/c-基础知识-7-面向对象初级/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://firefall123.github.io/2019/08/11/c-基础知识-7-面向对象初级/　　作者: yyf的博客" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -330,15 +340,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/08/09/c-基础知识-5-复杂数据类型/">
-                    c#基础知识--5.复杂数据类型
+                <a href="/2019/08/11/c-基础知识-8-面向对象继承/">
+                    c#基础知识--8.面向对象继承
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/08/09/c-基础知识-3-运算符/">
-                    c#基础知识--3.运算符
+                <a href="/2019/08/11/c-基础知识-6-函数/">
+                    c#基础知识--6.函数
                 </a>
             </div>
         
@@ -386,7 +396,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"c#基础知识--4.流程控制　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"c#基础知识--7.面向对象初级　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -406,7 +416,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/09/c-基础知识-5-复杂数据类型/" title="上一篇: c#基础知识--5.复杂数据类型">
+            <a href="/2019/08/11/c-基础知识-8-面向对象继承/" title="上一篇: c#基础知识--8.面向对象继承">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -414,7 +424,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/08/09/c-基础知识-3-运算符/" title="下一篇: c#基础知识--3.运算符">
+            <a href="/2019/08/11/c-基础知识-6-函数/" title="下一篇: c#基础知识--6.函数">
                 <i class="fa fa-angle-right"></i>
             </a>
         
