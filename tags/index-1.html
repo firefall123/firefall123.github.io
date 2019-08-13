@@ -375,45 +375,36 @@
 
 
 
-<div id="SOHUCS" sid="" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
 
 
 
 
 
-
-
+  <div id="giteement-ctn"></div>
   
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
   
   <script>
-    <!-- id: "tags" -->
-    var gitment = new Gitment({
-      id: "20190812180514",
-      owner: 'firefall123',
-      repo: 'yilia主题评论区',
-      oauth: {
-        client_id: '3f0dceb68b58303746a1',
-        client_secret: '7c2bb0433f404184dd69b7cfde41d6f785c7092b',
-      },
-    })
-    gitment.render('gitment-ctn')
+  <!-- id: "tags" -->
+  var giteement = new Giteement({
+    id: '20190812180514',
+    owner: 'CodeHamster',
+    repo: 'yilia-demo',
+    backcall_uri: 'https://www.codehamster66.cn/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '177e9f2cd4ca1ed9005dbf0f2b37db3368addd58c0e6357378c4e130aeafabcd',
+      client_secret: '0b3716a75a5d08d105188247b53095d74ab1012b6bd2c930e161316bbbf53f0f'
+    },
+  })
+  giteement.render('giteement-ctn')
   </script>
 
 
-  
+
+
+
 
 
 
@@ -556,11 +547,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据</a>
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据</a>
               </li>
              
               <li class="article-tag-list-item">
